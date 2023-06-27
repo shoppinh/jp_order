@@ -8,7 +8,11 @@ import {
 
 const AppContext = createContext(null);
 
-export const AppProvider: React.FC = ({ children }) => {
+interface AppProviderProps {
+  children: React.ReactNode;
+}
+
+export const AppProvider: React.FC<AppProviderProps> = ({children}) => {
   const [state, dispatch] = useReducer(rootReducer, initialState);
 
   const contextValue = useMemo(() => {

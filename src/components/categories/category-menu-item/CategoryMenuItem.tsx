@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { ReactElement } from "react";
 import Icon from "../../icon/Icon";
 import { StyledCategoryMenuItem } from "./CategoryMenuItemStyle";
 
@@ -8,6 +8,7 @@ interface CategoryMenuItemProps {
   icon?: string;
   title: string;
   caret?: boolean;
+  children?: ReactElement[] | ReactElement | any;
 }
 
 const CategoryMenuItem: React.FC<CategoryMenuItemProps> = ({

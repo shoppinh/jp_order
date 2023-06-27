@@ -10,6 +10,7 @@ export const StyledAccordionHeader = styled(Box)``;
 type AccordionHeaderProps = {
   showIcon?: boolean;
   open?: boolean;
+  children?: React.ReactNode;
   [key: string]: unknown;
 };
 

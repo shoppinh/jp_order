@@ -1,4 +1,4 @@
-import React, { cloneElement, Fragment, useEffect, useState } from "react";
+import React, { cloneElement, Fragment, ReactElement, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { StyledSidenav } from "./SidenavStyle";
 
@@ -9,6 +9,8 @@ export interface SidenavProps {
   scroll?: boolean;
   handle: React.ReactElement;
   toggleSidenav?: () => void;
+  children?: ReactElement[] | ReactElement | any;
+
 }
 
 const Sidenav: React.FC<SidenavProps> = ({
@@ -57,7 +59,7 @@ const Sidenav: React.FC<SidenavProps> = ({
             </div>
           </StyledSidenav>,
           sidenav
-        )}
+        ) as React.ReactNode}
 
         {handle &&
           cloneElement(handle, {

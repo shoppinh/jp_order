@@ -8,7 +8,7 @@ import {
   Slider,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import React, { Fragment } from "react";
+import React, { Fragment, ReactElement } from "react";
 import { CSSProperties } from "styled-components";
 import IconButton from "../buttons/IconButton";
 import Icon from "../icon/Icon";
@@ -39,6 +39,7 @@ export interface CarouselProps {
   rightButtonClass?: string;
   leftButtonStyle?: CSSProperties;
   rightButtonStyle?: CSSProperties;
+  children?: ReactElement[] | ReactElement | any;
 }
 
 const Carousel: React.FC<CarouselProps> = ({

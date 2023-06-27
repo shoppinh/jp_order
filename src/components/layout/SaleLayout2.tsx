@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React from "react";
+import React, { ReactElement } from "react";
 import Divider from "../Divider";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
@@ -11,6 +11,8 @@ import StyledAppLayout from "./AppLayoutStyle";
 
 type Props = {
   title?: string;
+  children?: ReactElement[] | ReactElement | any;
+
 };
 
 const SaleLayout2: React.FC<Props> = ({

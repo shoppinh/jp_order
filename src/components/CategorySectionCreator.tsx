@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import Box from "./Box";
 import CategorySectionHeader from "./CategorySectionHeader";
 import Container from "./Container";
@@ -7,6 +7,7 @@ export interface CategorySectionCreatorProps {
   iconName?: string;
   title?: string;
   seeMoreLink?: string;
+  children?: ReactElement[] | ReactElement | any;
 }
 
 const CategorySectionCreator: React.FC<CategorySectionCreatorProps> = ({

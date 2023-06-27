@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import Container from "../Container";
 import Grid from "../grid/Grid";
 import Hidden from "../hidden/Hidden";
@@ -6,7 +6,11 @@ import Navbar from "../navbar/Navbar";
 import VendorDashboardNavigation from "./VendorDashboardNavigation";
 import AppLayout from "./AppLayout";
 
-const VendorDashboardLayout: React.FC = ({ children }) => (
+const VendorDashboardLayout: React.FC = ({
+  children,
+}: {
+  children?: ReactElement[] | ReactElement | any;
+}) => (
   <AppLayout navbar={<Navbar />}>
     <Container my="2rem">
       <Grid container spacing={6}>
