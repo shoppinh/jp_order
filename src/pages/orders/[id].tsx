@@ -97,7 +97,7 @@ const OrderDetails = () => {
         <TableRow bg="gray.200" p="12px" boxShadow="none" borderRadius={0}>
           <FlexBox className="pre" m="6px" alignItems="center">
             <Typography fontSize="14px" color="text.muted" mr="4px">
-              Order ID:
+              Order ID: sss
             </Typography>
             <Typography fontSize="14px">9001997718074513</Typography>
           </FlexBox>
